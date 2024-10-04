@@ -18,10 +18,28 @@ public class Ej05 {
 	 * 
 	 * 
 	 * (float) 6    +      (double) 4.0  =========>		(double) 10
+	 * 
+	 * Ejercicio 4
+	 * ===========
+	 * (2+3*7>2*10&&3!=10)?(2+f):(5.0f)
+	 * 2+f ==> (int)2 + (float)1.0   ==> (float)2 + (float)1 ===> (float) 3
+	 * (5.0)f ==> (float) 5.0
+	 * (((2 + (3 * 7)) > (2 * 10)) && (3 != 10))
+	 * (float)3.0
+	 * 
+	 * 
+	 * 
+	 * 
+	 *  
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 *
 	 */
 	public static void main(String[] args) {
 		int i=1; long g=1; float f=1.0f; double d=1.0;boolean b=true;
-		System.out.println(((1+2)*i)>(f+2.0));
+		System.out.println("2+3"+4);
 	}
 }
