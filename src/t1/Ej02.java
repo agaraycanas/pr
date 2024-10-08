@@ -2,6 +2,7 @@ package t1;
 
 public class Ej02 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 	
 		float saldo = 186.5f; 

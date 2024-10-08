@@ -7,6 +7,7 @@ public class Ej15 {
 		return    (n1>n2) ?   n1  :  n2    ;
 	}
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		

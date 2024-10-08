@@ -8,6 +8,7 @@ public class Ej13 {
 		return 2*x;
 	}
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Dame un número: ");
