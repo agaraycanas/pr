@@ -3,27 +3,29 @@ package pruebas;
 public class KK {
 
 	public static void main(String[] args) {
-		int n1 = 2;
-		int n2 = 9;
+		String mensaje = "HOLA";
+		int nVeces = 0;
 		int i;
 		
-		System.out.println("INI");
-
-		// OPCION 1
-		i = n1;
-		while (i <= n2) {
-			if ( i%2==1 ) {
-				System.out.println(i);
-			}
-			i = i + 1;
-		}
+		//===========================================
+		i = 0;
 		
-		// OPCION 2
-		i = (n1%2==0) ? n1+1 : n1;
-		while ( i<= n2) {
-			System.out.println(i);
-			i = i + 2;
+		System.out.println("CON WHILE");
+		while ( i < nVeces ) {
+			System.out.println( mensaje);
+			i ++;
 		}
-		System.out.println("FIN");
+		//===========================================
+
+		i = 0;
+		System.out.println("CON DO...WHILE");
+		do {
+			System.out.println( mensaje);
+			i++;
+		}
+		while ( i < nVeces );
+		
+		
+
 	}
 }
