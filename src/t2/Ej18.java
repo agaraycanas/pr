@@ -2,7 +2,7 @@ package t2;
 
 import java.util.Scanner;
 
-public class Ej17 {
+public class Ej18 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -29,12 +29,14 @@ public class Ej17 {
 		anterior = scan.nextInt();
 		actual = anterior;
 
-		do {
-			anterior = actual;
-			System.out.print("Introduce otro número: ");
-			actual = scan.nextInt();
+		if ( anterior != 0) {
+			do {
+				anterior = actual;
+				System.out.print("Introduce otro número: ");
+				actual = scan.nextInt();
+			}
+			while ( actual != 0 && actual > anterior);
 		}
-		while (actual > anterior);
 		
 		System.out.println("FIN");
 
