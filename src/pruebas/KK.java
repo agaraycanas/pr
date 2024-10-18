@@ -3,29 +3,22 @@ package pruebas;
 public class KK {
 
 	public static void main(String[] args) {
-		String mensaje = "HOLA";
-		int nVeces = 0;
-		int i;
+		int x1 = 1;
+		int x2 = 2;
+		int x3 = 3;
 		
-		//===========================================
-		i = 0;
+		int sumaParcial = 0;
 		
-		System.out.println("CON WHILE");
-		while ( i < nVeces ) {
-			System.out.println( mensaje);
-			i ++;
-		}
-		//===========================================
-
-		i = 0;
-		System.out.println("CON DO...WHILE");
-		do {
-			System.out.println( mensaje);
-			i++;
-		}
-		while ( i < nVeces );
+		sumaParcial = 10*sumaParcial + x1;
+		System.out.println("Suma parcial de "+x1+" es "+sumaParcial);
+		
+		sumaParcial = 10*sumaParcial + x2;
+		System.out.println("Suma parcial de "+x1+" y "+x2+ " es "+sumaParcial);
+		
+		sumaParcial = 10*sumaParcial + x3;
+		System.out.println("Suma parcial de "+x1+" y "+x2+ " y "+x3 +" es "+sumaParcial);
 		
 		
-
 	}
+	
 }

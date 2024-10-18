@@ -18,13 +18,11 @@ public class Ej20 {
 		int sumaParcial = 0;
 		String stringParcial = "";
 
-		// MOSTRAR EL NUMERO INVERSO de numero
 		while (dividendo != 0) {
 			dividendo = cociente;
 			cociente = dividendo / divisor;
 			resto = dividendo % divisor;
 			if ( ! (cociente == 0 && resto== 0) ) {
-				//System.out.print(resto);
 				sumaParcial = sumaParcial*10 + resto;
 				stringParcial = stringParcial + resto;
 			}
