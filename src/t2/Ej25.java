@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Ej25 {
 	public static boolean esPrimo(int n) {
 		boolean primo = true;
+		for (int i=2; primo && i<n ; i++) {
+			if (n%i == 0) {
+				primo = false;
+			}
+		}
 		return primo;
 	}
 	
@@ -14,7 +19,7 @@ public class Ej25 {
 		int numero = scan.nextInt();
 
 		while (numero!=0) {
-			String siNo = esPrimo(numero)?" ":" no ";
+			String siNo = esPrimo(numero)?" ":" NO ";
 			System.out.println(numero + siNo +"es primo");
 			System.out.print("Introduce un número (0 para terminar): ");
 			numero = scan.nextInt();

@@ -20,6 +20,13 @@ public class Ej24 {
 	}
 	
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Introduce un número: ");
+		int numero = scan.nextInt();
+		
+		int sdi = sumaDigitosImpar(numero);
+		System.out.println("La suma de los dígitos de "+numero+" es "+ sdi);
+		/*
 		int x1 = 123; 	// 4
 		int x2 = 10283; // 6 
 		int x3 = 129973;// 14
@@ -29,5 +36,6 @@ public class Ej24 {
 		System.out.println("Suma de "+x2+" es "+sumaDigitosImpar(x2)); // 10283		6
 		System.out.println("Suma de "+x3+" es "+sumaDigitosImpar(x3)); // 129973	14
 		System.out.println("Suma de "+x4+" es "+sumaDigitosImpar(x4)); // 1234		6
+		*/
 	}
 }
