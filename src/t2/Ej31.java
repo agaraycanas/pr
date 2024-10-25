@@ -17,10 +17,13 @@ public class Ej31 {
 	}
 	
 	public static long comb2(int n,int k) {
-		long sol = 1;
-		// Hacer aquí el algoritmo optimizado para numeros grandes
-		// Observar 2 casos: si k <n/2 ó k>=k/2
-		return sol;
+		long num  = 1 ;
+		long den  = (k<(n/2)) ? fact(k) : fact(n-k);
+		long cota = (k<(n/2)) ? (n-k+1) : (k+1);
+		for (long i=n; i >= cota; i-- ) {
+			num = num * i;
+		}
+		return num/den;
 	}
 	
 	
@@ -33,7 +36,8 @@ public class Ej31 {
 		System.out.print("Introduce k: ");
 		int k = scan.nextInt();
 
-		System.out.println(n+" sobre "+k+" = " + comb(n,k) );
+		System.out.println("[ANT] "+n+" sobre "+k+" = " + comb(n,k) );
+		System.out.println(n+" sobre "+k+" = " + comb2(n,k) );
 		
 
 	}
