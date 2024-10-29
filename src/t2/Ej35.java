@@ -53,6 +53,16 @@ public class Ej35 {
 	}
 
 	public static void cFor() {
+		boolean amor;
+		int i;
+		
+		for (amor = true, i = 1 ; amor || i <= 4 ; amor = !amor, i++) {
+			if (amor) {
+				System.out.println("Me quiere");
+			} else {
+				System.out.println("NO Me quiere");
+			}
+		}
 	}
 
 	// =======================================================
