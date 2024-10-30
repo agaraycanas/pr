@@ -1,19 +1,21 @@
 package pruebas;
 
-import java.util.Scanner;
 
 class Prueba {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Se pueden repetir los elementos (s/n): ");
-		String cadena = scan.nextLine();
-		
-		if (cadena.equals("s")) {
-			System.out.println("SI");
-		}
-		else {
-			System.out.println("NO");
-		}
+	public static void main(String[] args) {
+		double longitudGrados=0, longitudMinutos=0, longitudSegundos=0;
+		double latitudGrados = 0, latitudMinutos = 0, latitudSegundos=0;
+		System.out.println(
+				temperatura(
+						longitudGrados, longitudMinutos, 	longitudSegundos, 
+						latitudGrados, 	latitudMinutos,		latitudSegundos
+						)
+				);
+	}
+
+	public static double temperatura(double longitudGrados, double longitudMinutos, double longitudSegundos,
+			double latitudGrados, double latitudMinutos, double latitudSegundos) {
+		return 0;
 	}
 }
