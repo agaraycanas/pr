@@ -9,7 +9,12 @@ public class P01 {
 			if (repetir) {
 				tituloFinal = "Variaciones CON repetición de " + n + " elementos tomados de " + k + " en " + k;
 			} else {
-				tituloFinal = "Variaciones de " + n + " elementos tomados de " + k + " en " + k;
+				if (n==k) {
+					tituloFinal = "Permutaciones de " + n + " elementos";
+				}
+				else {
+					tituloFinal = "Variaciones de " + n + " elementos tomados de " + k + " en " + k;
+				}
 			}
 		} else {
 			if (repetir) {
@@ -27,7 +32,12 @@ public class P01 {
 			if (repetir) {
 				tituloFinal = "VR (" + n + "," + k + ")";
 			} else {
-				tituloFinal = "V (" + n + "," + k + ")";
+				if (n==k) {
+					tituloFinal = "P (" + n + ")";
+				}
+				else {
+					tituloFinal = "V (" + n + "," + k + ")";
+				}
 			}
 		} else {
 			if (repetir) {
@@ -36,7 +46,7 @@ public class P01 {
 				tituloFinal = "C (" + n + "," + k + ")";
 			}
 		}
-		return tituloFinal ;
+		return tituloFinal;
 	}
 
 	public static long solucion(int n, int k, boolean repetir, boolean orden) {
@@ -59,34 +69,40 @@ public class P01 {
 
 	public static long fact(int n) {
 		long acumulado = 1;
-		for (long i=2;i<=n;i++) {
+		for (long i = 2; i <= n; i++) {
 			acumulado *= i;
 		}
 		return acumulado;
 	}
 
 	public static long cr(int n, int k) {
-		return 0L;
+		return c(n+k-1,k);
 	}
 
 	public static long c(int n, int k) {
-		long num  = 1 ;
-		long den  = (k<(n/2)) ? fact(k) : fact(n-k);
-		long cota = (k<(n/2)) ? (n-k+1) : (k+1);
-		for (long i=n; i >= cota; i-- ) {
+		long num = 1;
+		long den = (k < (n / 2)) ? fact(k) : fact(n - k);
+		long cota = (k < (n / 2)) ? (n - k + 1) : (k + 1);
+		for (long i = n; i >= cota; i--) {
 			num = num * i;
 		}
-		return num/den;
+		return num / den;
 	}
 
 	public static long vr(int n, int k) {
-		return 0L;
+		long solucion = 1;
+		for (int i=0; i<k ; i++) {
+			solucion = solucion * n;
+		}
+		return solucion;
 	}
 
 	public static long v(int n, int k) {
-		// TODO desarrollo
-		// TODO
-		return 0L;
+		long solucion = 1;
+		for (int i=n; i>=n-k+1 ; i--) {
+			solucion = solucion * i;
+		}
+		return solucion;
 	}
 
 	public static void main(String[] args) {
