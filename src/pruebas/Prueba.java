@@ -1,21 +1,16 @@
 package pruebas;
 
-
 class Prueba {
 
-	public static void main(String[] args) {
-		double longitudGrados=0, longitudMinutos=0, longitudSegundos=0;
-		double latitudGrados = 0, latitudMinutos = 0, latitudSegundos=0;
-		System.out.println(
-				temperatura(
-						longitudGrados, longitudMinutos, 	longitudSegundos, 
-						latitudGrados, 	latitudMinutos,		latitudSegundos
-						)
-				);
+	public static void f(int[] a) {
+		a[0] = 100;
 	}
 
-	public static double temperatura(double longitudGrados, double longitudMinutos, double longitudSegundos,
-			double latitudGrados, double latitudMinutos, double latitudSegundos) {
-		return 0;
+	public static void main(String[] args) {
+		int[] miArray = { 10, 20, 30, 40, 50 };
+		System.out.println(miArray[0]);
+		f(miArray);
+		System.out.println(miArray[0]);
 	}
+
 }
