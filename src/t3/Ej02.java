@@ -12,6 +12,7 @@ public class Ej02 {
 		}
 		return min;
 	}
+	//===============================================================
 	public static int maximo(int[] numeros) {
 		int max = numeros[0];
 		for (int i=1; i<numeros.length && numeros[i]!=0 ;i++) {
@@ -24,8 +25,8 @@ public class Ej02 {
 	
 	//===============================================================
 
-	public static int mediaAritmetica(int[] numeros) {
-		int sumaParcial = 0;
+	public static double mediaAritmetica(int[] numeros) {
+		double sumaParcial = 0;
 		int contador;
 		for (contador=0; contador<numeros.length && numeros[contador]!=0 ; contador++) {
 			sumaParcial += numeros[contador];
@@ -34,31 +35,44 @@ public class Ej02 {
 	}
 	
 	//===============================================================
-	
-	public static void main(String[] args) {
+
+	public static void mostrarSinMaxNiMin(int[] n) {
+		int max = maximo(n);
+		int min = minimo(n);
+		
+		for (int i=0; i<n.length && n[i]!=0 ; i++) {
+			String coma = ", ";
+			if ( (n[i] != max) && (n[i] != min) ) {
+				System.out.print( ( i==0 ? "" : coma ) + n[i]);
+			}
+		}
+	}
+
+
+	//===============================================================
+
+	public static void rellenarDatosArray(int[] n) {
 		Scanner scan = new Scanner(System.in);
 		boolean seguir = true;
 		int contador = 1;
-		final int LIMITE = 30;
-		int[] n = new int[LIMITE];
-		
+
 		do {
-			System.out.print("Introduce n ("+contador+"/"+LIMITE+"): ");
+			System.out.print("Introduce n ("+contador+"/"+n.length+"): ");
 			n[contador-1] = scan.nextInt();
 			contador++;
-			seguir = (n[contador-2]!=0) && (contador<=LIMITE);
+			seguir = (n[contador-2]!=0) && (contador<=n.length);
 		} while (seguir);
-		
+	}
+	//===============================================================
+	
+	public static void main(String[] args) {
+		final int LIMITE = 30;
+		int[] n = new int[LIMITE];
+
+		rellenarDatosArray(n);
 		System.out.println("=========================");
-		
-		for (int i=0; i<LIMITE && n[i]!=0 ; i++) {
-			String coma = ", ";
-			System.out.print( ( i==0 ? "" : coma ) + n[i]);
-		}
-		
+		mostrarSinMaxNiMin(n);
 		System.out.println();
-		System.out.println("El máximo es: " + maximo(n));
-		System.out.println("El mínimo es: " + minimo(n));
 		System.out.println("La media aritmética es: " + mediaAritmetica(n));
 		
 	}
