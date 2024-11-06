@@ -1,31 +1,12 @@
 package pruebas;
 
-import java.util.Arrays;
-
-class Prueba {
-
-	public static void decirHola() {
-		System.out.println("HOLA");
-
-	}
-
-	public static void separador() {
-		System.out.println("===============");
-	}
-
-	public static void presentacion() {
-		separador();
-		decirHola();
-		separador();
-		System.out.println("QUE TAL");
-		System.out.println("Vamos a empezar el programa");
-	}
-
+public class Prueba {
 	public static void main(String[] args) {
-		presentacion();
+		String cadenaDeSaludo = "Qué tal estás";
+		for (int i = 0; i < args.length; i++) {
+			cadenaDeSaludo += (" " + args[i]);
+		}
+		System.out.println(cadenaDeSaludo);
 
-		/*
-		 * sdhfkjsdf
-		 */
 	}
 }
