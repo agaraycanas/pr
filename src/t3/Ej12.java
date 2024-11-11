@@ -2,13 +2,23 @@ package t3;
 
 import java.util.Arrays;
 
-public class Ej11 {
+public class Ej12 {
 
 	public static void main(String[] args) {
-		int[] original = { 10, 4, 5, -6, 7, 1, 9 };
+
+		int[] original = convertir(args);
+
 		System.out.println("a \t\t= " + Arrays.toString(original));
 		int[] ordenado = burbuja(original);
 		System.out.println("a(ordenado)\t= " + Arrays.toString(ordenado));
+	}
+
+	public static int[] convertir(String[] args) {
+		int[] arrayADevolver = new int[args.length];
+		for (int i = 0; i < arrayADevolver.length; i++) {
+			arrayADevolver[i] = Integer.parseInt(args[i]);
+		}
+		return arrayADevolver;
 	}
 
 	public static int[] clonar(int[] a) {
@@ -24,7 +34,7 @@ public class Ej11 {
 		int[] copia = clonar(original);
 
 		for (int limite = copia.length - 2; limite >= 0; limite--) {
-			for (int i = 0; i <= limite; i++) {
+			for (int i = 0; i <= limite ; i++) {
 				if (copia[i] > copia[i + 1]) {
 					swap(copia, i, i + 1);
 				}
