@@ -1,32 +1,61 @@
 package t3;
 
 public class Ej22 {
-	
+
 	// ============================
-	public static String toString(String[][] a ) {
+	public static String toString(String[][] a, String columna) {
 		String cadena = "";
-		cadena += ( a[0][0] + "\t" + a[0][1] + "\t" + a[0][2] + "\n" );
-		cadena += "==========================\n";
-		for (int i = 1; i < a.length; i++) {
-				cadena += ( a[i][0] + "\t" + a[i][1] + "\t" + a[i][2] + "\n" );
-		}
+
+		if (columna == "*") {
+			for (int j = 0; j < a[0].length; j++) {
+				cadena += (a[0][j] + "\t\t");
+			}
 			
+			cadena += "\n=================================================\n";
+
+			for (int i = 1; i < a.length; i++) {
+				for (int j = 0; j < a[i].length; j++) {
+					cadena += (a[i][j] + "\t\t");
+				}
+				cadena += "\n";
+			}
+		}
+		else {
+			int posicionTentativa = 0;
+			int posicion=-1;
+			
+			for (int j=0 ; j<a[0].length;j++) {
+				if (a[0][posicionTentativa] == columna) {
+					posicion = posicionTentativa;
+				}
+			}
+
+			cadena += "\n=================================================\n";
+			
+			for (int i = 1; i < a.length; i++) {
+				for (int j = 0; j < a[i].length; j++) {
+					cadena += (a[i][j] + "\t\t");
+				}
+				cadena += "\n";
+			}
+			
+		}
 		return cadena;
 	}
 
 	// ============================
 	public static void main(String[] args) {
 		String[][] personas = { 
-				{  "NOMBRE", "APELLIDO" ,"DNI"}, 
-				{  "pepe", "garcia" ,"1"}, 
-				{  "ana", "sanchez" ,"2"}, 
-				{ "perico", "palotes" ,"3"},
-				{ "juan", "palomo","4" }, 
-				{ "maria", "sanchez","6" }, 
+				{ "NOMBRE", "APELLIDO", "DNI", "OTRA" }, 
+				{ "pepe", "garcia", "1", "a" },
+				{ "ana", "sanchez", "2", "a" }, 
+				{ "perico", "palotes", "3", "a" }, 
+				{ "juan", "palomo", "4", "a" },
+				{ "maria", "sanchez", "6", "a" }, 
 				};
 
-		System.out.println(toString(personas));
+		System.out.println(toString(personas, "DNI"));
 	}
-	//============================
+	// ============================
 
 }
