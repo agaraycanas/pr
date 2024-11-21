@@ -1,6 +1,16 @@
 package t3;
 
-public class Ej27 {
+public class Ej28 {
+	public static String[][] initDescubierto() {
+		String[][] tablero = new String[10][10];
+		for (int i=0;i<10;i++) {
+			for (int j=0;j<10;j++) {
+				tablero[i][j] = " ";
+			}
+		}
+		return tablero;
+	}
+
 	public static String[][] init() {
 		String[][] tablero = new String[10][10];
 		for (int i=0;i<10;i++) {
@@ -27,6 +37,6 @@ public class Ej27 {
 	}
 	
 	public static void main(String[] args) {
-		mostrar(init());
+		mostrar(initDescubierto());
 	}
 }

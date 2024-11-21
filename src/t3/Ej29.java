@@ -1,6 +1,16 @@
 package t3;
 
-public class Ej27 {
+public class Ej29 {
+	public static String[][] initDescubierto() {
+		String[][] tablero = new String[10][10];
+		for (int i=0;i<10;i++) {
+			for (int j=0;j<10;j++) {
+				tablero[i][j] = " ";
+			}
+		}
+		return tablero;
+	}
+
 	public static String[][] init() {
 		String[][] tablero = new String[10][10];
 		for (int i=0;i<10;i++) {
@@ -26,7 +36,28 @@ public class Ej27 {
 		System.out.println("  -------------------------------");
 	}
 	
+	public static int ubicar
+	(
+			String[][]	t,
+			String		fila,
+			String		columna,
+			/*
+			int			fila,
+			int 		columna,
+			*/
+			String		hv,
+			int			tam
+	) 
+	{
+		//t[fila][columna] = "O";
+		return 0;
+	}
+	
 	public static void main(String[] args) {
-		mostrar(init());
+		String[][] propio = init();
+		mostrar(propio);
+		ubicar(propio, "A","7","H",4);
+		System.out.println("\n=====================\n");
+		mostrar(propio);
 	}
 }
