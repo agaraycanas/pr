@@ -30,10 +30,11 @@ public class Ej23 {
 		}
 		
 		// Añadir el resto de a ó b en función de cuál sea el más grande de los dos
-		int c = 2*tamPeque;
+		//int c = 2*tamPeque;
 		for (int i= tamPeque; i<tamGrande ;i++) {
-			mezclado[c] = ( a.length==tamGrande ? a[i] : b[i] ) ;
-			c++;
+			mezclado[i+tamPeque] = ( a.length==tamGrande ? a[i] : b[i] ) ;
+			//	mezclado[c] = ( a.length==tamGrande ? a[i] : b[i] ) ;
+			//	c++;
 		}
 		
 		return mezclado;
@@ -42,6 +43,17 @@ public class Ej23 {
 	//===============================================================
 	private static int[] cremaB(int[] a, int[] b) {
 		int[] mezclado = new int[a.length + b.length];
+		int tamPeque = a.length < b.length ? a.length : b.length;
+		int tamGrande = a.length > b.length ? a.length : b.length;
+		
+		for (int i=0;i< tamPeque ;i++) {
+			mezclado[  2*i 		]	= b[i];
+			mezclado[ (2*i) +1 	] 	= a[i];
+		}
+		
+		for (int i= tamPeque; i<tamGrande ;i++) {
+			mezclado[i+tamPeque] = ( a.length==tamGrande ? a[i] : b[i] ) ;
+		}
 		return mezclado;
 	}
 	
@@ -90,7 +102,8 @@ public class Ej23 {
 	
 	public static void main(String[] args) {
 		int[] a = {10,20,30};
-		int[] b = {40,50,60};
+		int[] b = {40,50,60,70,80,90};
+		//int[] b = {40,50};
 		System.out.println("A: "+Arrays.toString(a));
 		System.out.println("B: "+Arrays.toString(b));
 		System.out.println("Delante A: "+Arrays.toString(mezclar(a, b, "delanteA")));
