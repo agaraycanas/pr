@@ -49,14 +49,32 @@ public class Ej29 {
 			int			tam
 	) 
 	{
-		//t[fila][columna] = "O";
+		int f = cf(fila);
+		int c = cc(columna);
+		t[f][c] = "O";
 		return 0;
 	}
-	
+
+	public static int cf(String fila) {
+		int f = -1;
+		String[] letraMay = {"A","B","C","D","E","F","G","H","I","J"};
+		String[] letraMin = {"a","b","c","d","e","f","g","h","i","j"};
+		for (int i=0;i<10;i++) {
+			if (fila == letraMay[i] || fila == letraMin[i] ) {
+				f=i;
+			}
+		}
+		return f;
+	}
+
+	public static int cc(String columna) {
+		return ( Integer.parseInt(columna) -1 );
+	}
+
 	public static void main(String[] args) {
 		String[][] propio = init();
 		mostrar(propio);
-		ubicar(propio, "A","7","H",4);
+		ubicar(propio, "c","1","H",4);
 		System.out.println("\n=====================\n");
 		mostrar(propio);
 	}
