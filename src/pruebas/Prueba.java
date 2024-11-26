@@ -8,15 +8,12 @@ public class Prueba {
 	// y a continuación pintar las n primeras
 	// letras del abecedario
 	public static void main(String[] args) {
+		System.out.print("Introduce cadena: ");
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce n (1..15): ");
-		int n= scan.nextInt();
-		String[] abecedario = {"A","B","C","D","E","F","G","H","I","J"};
-		for (int i=0; i<n ; i++) {
-			System.out.print( abecedario[i] +" ");
-		}
-		
+		String a = scan.next();
+		String b = scan.next();
+		String c = scan.next();
+		System.out.println("A: "+a+" // B: "+ b+" // C: " + c);
 	}
 
 }

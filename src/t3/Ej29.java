@@ -41,17 +41,26 @@ public class Ej29 {
 			String[][]	t,
 			String		fila,
 			String		columna,
-			/*
-			int			fila,
-			int 		columna,
-			*/
 			String		hv,
 			int			tam
 	) 
 	{
 		int f = cf(fila);
 		int c = cc(columna);
-		t[f][c] = "O";
+		if (hv=="H" || hv=="h") {
+			for (int j=c ; j< (c+tam) ; j++ ) {
+				t[f][j] = "O";
+			}
+		}
+		else if (hv=="V" || hv == "v") {
+			for (int i=f ; i< (f+tam) ; i++ ) {
+				t[i][c] = "O";
+			}
+		}
+		else { //error
+			
+		}
+		
 		return 0;
 	}
 
@@ -74,7 +83,10 @@ public class Ej29 {
 	public static void main(String[] args) {
 		String[][] propio = init();
 		mostrar(propio);
-		ubicar(propio, "c","1","H",4);
+		ubicar(propio, "b","3","v",6);
+		System.out.println("\n=====================\n");
+		mostrar(propio);
+		ubicar(propio, "j","1","h",6);
 		System.out.println("\n=====================\n");
 		mostrar(propio);
 	}
