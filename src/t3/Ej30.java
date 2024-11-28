@@ -1,6 +1,8 @@
 package t3;
 
-public class Ej29 {
+import java.util.Scanner;
+
+public class Ej30 {
 	public static String[][] initDescubierto() {
 		String[][] tablero = new String[10][10];
 		for (int i=0;i<10;i++) {
@@ -47,12 +49,12 @@ public class Ej29 {
 	{
 		int f = cf(fila);
 		int c = cc(columna);
-		if (hv=="H" || hv=="h") {
+		if (hv.equals("H") || hv.equals("h") ) {
 			for (int j=c ; j< (c+tam) ; j++ ) {
 				t[f][j] = "O";
 			}
 		}
-		else if (hv=="V" || hv == "v") {
+		else if (hv.equals("V") || hv.equals("v") ) {
 			for (int i=f ; i< (f+tam) ; i++ ) {
 				t[i][c] = "O";
 			}
@@ -69,7 +71,7 @@ public class Ej29 {
 		String[] letraMay = {"A","B","C","D","E","F","G","H","I","J"};
 		String[] letraMin = {"a","b","c","d","e","f","g","h","i","j"};
 		for (int i=0;i<10;i++) {
-			if (fila == letraMay[i] || fila == letraMin[i] ) {
+			if (fila .equals(letraMin[i]) || fila.equals(letraMin[i]) ) {
 				f=i;
 			}
 		}
@@ -83,10 +85,15 @@ public class Ej29 {
 	public static void main(String[] args) {
 		String[][] propio = init();
 		mostrar(propio);
-		ubicar(propio, "b","3","v",4);
-		System.out.println("\n=====================\n");
-		mostrar(propio);
-		ubicar(propio, "j","1","h",3);
+		
+		int tam= 2;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Introduce ubicación de barquito de " + tam+ ": ");
+		String fila = scan.next();
+		String columna = scan.next();
+		String hv = scan.next();
+		System.out.println(fila + "//" + columna +" // "+hv);
+		ubicar(propio, fila,columna,hv,tam);
 		System.out.println("\n=====================\n");
 		mostrar(propio);
 	}
