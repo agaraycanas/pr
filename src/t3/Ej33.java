@@ -2,7 +2,7 @@ package t3;
 
 import java.util.Scanner;
 
-public class Ej31 {
+public class Ej33 {
 	
 	public static String[][] initDescubierto() {
 		String[][] tablero = new String[10][10];
@@ -108,10 +108,36 @@ public class Ej31 {
 		pulsarIntro();
 	}
 	
+	public int disparo(String[][] tPropio, String[][] tDescubierto, String fila, String columna) {
+		int status = 0;
+		int f = cf(fila);
+		int c = cf(columna);
+		
+		if (f<0 ||f>9 || c<0 || c>9 ) {
+			status = -2;
+		}
+		else if (tPropio[f][c].equals("O")) {
+			tPropio[f][c] = "X";
+			tDescubierto[f][c] = "X";
+			status = 1;
+		}
+		else if (tPropio[f][c].equals(".")) {
+			tPropio[f][c] = "_";
+			tDescubierto[f][c] = "_";
+			status = 0;
+		}
+		else if (tPropio[f][c].equals("X") || tPropio[f][c].equals("_")) {
+			status = -1;
+		}
+		return status;
+	}
+	
 	public static void main(String[] args) {
 		String[][] propio1 = init();
+		String[][] propio2 = init();
 
 		ubicarBarcos(1,propio1);
+		ubicarBarcos(2,propio2);
 
 	}
 

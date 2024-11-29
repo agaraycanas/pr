@@ -2,7 +2,7 @@ package t3;
 
 import java.util.Scanner;
 
-public class Ej31 {
+public class Ej32 {
 	
 	public static String[][] initDescubierto() {
 		String[][] tablero = new String[10][10];
@@ -110,8 +110,10 @@ public class Ej31 {
 	
 	public static void main(String[] args) {
 		String[][] propio1 = init();
+		String[][] propio2 = init();
 
 		ubicarBarcos(1,propio1);
+		ubicarBarcos(2,propio2);
 
 	}
 
