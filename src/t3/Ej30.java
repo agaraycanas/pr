@@ -82,19 +82,27 @@ public class Ej30 {
 		return ( Integer.parseInt(columna) -1 );
 	}
 
-	public static void main(String[] args) {
-		String[][] propio = init();
-		mostrar(propio);
-		
-		int tam= 2;
+	public static void ubicarBarco(int tam, String[][] propio) {
 		Scanner scan = new Scanner(System.in);
+		String fila, columna, hv;
+
 		System.out.println("Introduce ubicación de barquito de " + tam+ ": ");
-		String fila = scan.next();
-		String columna = scan.next();
-		String hv = scan.next();
-		System.out.println(fila + "//" + columna +" // "+hv);
+		fila = scan.next();
+		columna = scan.next();
+		hv = scan.next();
 		ubicar(propio, fila,columna,hv,tam);
 		System.out.println("\n=====================\n");
 		mostrar(propio);
+	
+	}
+	
+	public static void main(String[] args) {
+		String[][] propio = init();
+		mostrar(propio);
+		int[] tam = { 2, 2, 3, 3, 4 };
+		
+		for ( int i=0; i<tam.length ; i++) {
+			ubicarBarco( tam[i] ,propio);
+		}
 	}
 }
