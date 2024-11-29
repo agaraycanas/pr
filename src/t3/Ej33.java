@@ -96,9 +96,7 @@ public class Ej33 {
 		}
 	}
 	
-	public static void ubicarBarcos(int numJugador, String[][] propio) {
-		int[] tam = { 2, 4 };
-
+	public static void ubicarBarcos(int numJugador, String[][] propio, int[] tam) {
 		System.out.println("RONDA JUGADOR "+numJugador);
 		mostrar(propio);
 		for (int i = 0; i < tam.length; i++) {
@@ -108,10 +106,10 @@ public class Ej33 {
 		pulsarIntro();
 	}
 	
-	public int disparo(String[][] tPropio, String[][] tDescubierto, String fila, String columna) {
+	public static int disparo(String[][] tPropio, String[][] tDescubierto, String fila, String columna) {
 		int status = 0;
 		int f = cf(fila);
-		int c = cf(columna);
+		int c = cc(columna);
 		
 		if (f<0 ||f>9 || c<0 || c>9 ) {
 			status = -2;
@@ -131,15 +129,70 @@ public class Ej33 {
 		}
 		return status;
 	}
+
+	public static void disparar(int numJugador, int numDisparo,String[][] propio, String[][] descubierto) {
+		System.out.println("Jugador "+numJugador+": Haz tu disparo ["+numDisparo+"/3](fila columna): ");
+		Scanner scan = new Scanner(System.in);
+		String fila = scan.next();
+		String columna = scan.next();
+		switch (disparo(propio,descubierto,fila,columna)) {
+			case -2: System.out.println("FUERA DE LIMITES");break;
+			case -1: System.out.println("DISPARO REPETIDO");break;
+			case 0: System.out.println("AGUA");break;
+			case 1: System.out.println("TOCADO");break;
+			case 2: System.out.println("HUNDIDO");break;
+		}
+		mostrar(descubierto);
+	}
 	
+	private static boolean situacion(String[][] descubierto, int[] tam) {
+		int suma = 0;
+		
+		for (int i=0;i<tam.length;i++) {
+			suma += tam[i];
+		}
+		
+		int tocado=0;
+		for (int i=0;i<10;i++) {
+			for (int j=0;j<10;j++) {
+				if (descubierto[i][j].equals("X")) {
+					tocado++;
+				}
+			}
+		}
+		return tocado==suma;
+	}
+
 	public static void main(String[] args) {
+		int[] tam = { 2, 4 };
 		String[][] propio1 = init();
 		String[][] propio2 = init();
+		String[][] descubierto1 = initDescubierto();
+		String[][] descubierto2 = initDescubierto();
 
-		ubicarBarcos(1,propio1);
-		ubicarBarcos(2,propio2);
-
+		ubicarBarcos(1,propio1,tam);
+		ubicarBarcos(2,propio2,tam);
+		
+		int numJugador = 1;
+		int numDisparo = 1;
+		boolean terminar = false;
+		
+		while (!terminar) {
+			
+			String[][] tPropio = numJugador==1 ? propio2 : propio1;
+			String[][] tDescubierto = numJugador==1 ? descubierto1 : descubierto2;
+			
+			disparar(numJugador,numDisparo,tPropio,tDescubierto);
+			
+			numDisparo = numDisparo<3 ? numDisparo + 1 : 1 ;
+			numJugador = numDisparo == 3 ? (numJugador == 1 ? 2 : 1) : numJugador; 
+			terminar=situacion(descubierto1,tam);
+		}
+		
+		System.out.println("PARTIDA FINALIZADA");
 	}
+
+
 
 
 }
