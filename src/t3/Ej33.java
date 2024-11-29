@@ -185,7 +185,7 @@ public class Ej33 {
 			disparar(numJugador,numDisparo,tPropio,tDescubierto);
 			
 			numDisparo = numDisparo<3 ? numDisparo + 1 : 1 ;
-			numJugador = numDisparo == 3 ? (numJugador == 1 ? 2 : 1) : numJugador; 
+			numJugador = numDisparo == 1 ? (numJugador == 1 ? 2 : 1) : numJugador; 
 			terminar=situacion(descubierto1,tam);
 		}
 		
