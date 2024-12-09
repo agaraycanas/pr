@@ -1,3 +1,4 @@
+package examen;
 
 
 public class Ej01 {

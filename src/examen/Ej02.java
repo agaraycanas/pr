@@ -1,3 +1,4 @@
+package examen;
 public class Ej02 {
 	public static void main(String[] args) {
 		int tam = Integer.parseInt( args[0] );
