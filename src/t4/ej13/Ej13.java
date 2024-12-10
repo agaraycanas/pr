@@ -1,13 +1,10 @@
-package t4.ej12;
+package t4.ej13;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Ej12 {
+public class Ej13 {
 
 	public static void main(String[] args) {
-		Random random = new Random();
-		
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Introduce num. de tiradas: ");
@@ -17,7 +14,7 @@ public class Ej12 {
 		int nCaras = scanner.nextInt();
 
 		for (int i=0;i<nTiradas;i++) {
-			System.out.println("("+(i+1)+") "+ (random.nextInt(nCaras)+1) );
+			System.out.println("("+(i+1)+") "+ ( (int)(Math.random() *  nCaras) +1) );
 		}
 	}
 }
