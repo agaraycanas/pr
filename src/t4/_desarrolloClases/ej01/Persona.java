@@ -19,6 +19,6 @@ public class Persona {
 	}
 	public Persona() {
 		this.nombre = "Anónimo";
-		this.numeroDeLaSuerte = ((int)(Math.random()*10))+1;
+		this.numeroDeLaSuerte = (new java.util.Random()).nextInt(10)+1;
 	}
 }
