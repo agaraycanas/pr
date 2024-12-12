@@ -25,7 +25,7 @@ public class Ej31 {
 	}
 
 	public static void mostrar(String[][] t) {
-		String[] letra = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+		String[] letra = { "Persona", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
 		System.out.println("  1  2  3  4  5  6  7  8  9  10");
 		System.out.println("  -------------------------------");
 
@@ -59,7 +59,7 @@ public class Ej31 {
 
 	public static int cf(String fila) {
 		int f = -1;
-		String[] letraMay = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+		String[] letraMay = { "Persona", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
 		String[] letraMin = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
 		for (int i = 0; i < 10; i++) {
 			if (fila.equals(letraMin[i]) || fila.equals(letraMin[i])) {

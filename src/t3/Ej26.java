@@ -3,7 +3,7 @@ package t3;
 public class Ej26 {
 	
 	public static void mostrar(String[][] t) {
-		String[] letra = {"A","B","C","D","E","F","G","H","I","J"};
+		String[] letra = {"Persona","B","C","D","E","F","G","H","I","J"};
 		System.out.println("  1  2  3  4  5  6  7  8  9  10");
 		System.out.println("  -------------------------------");
 		

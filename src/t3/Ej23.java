@@ -104,11 +104,11 @@ public class Ej23 {
 		int[] a = {10,20,30};
 		int[] b = {40,50,60,70,80,90};
 		//int[] b = {40,50};
-		System.out.println("A: "+Arrays.toString(a));
+		System.out.println("Persona: "+Arrays.toString(a));
 		System.out.println("B: "+Arrays.toString(b));
-		System.out.println("Delante A: "+Arrays.toString(mezclar(a, b, "delanteA")));
+		System.out.println("Delante Persona: "+Arrays.toString(mezclar(a, b, "delanteA")));
 		System.out.println("Delante B: "+Arrays.toString(mezclar(a, b, "delanteB")));
-		System.out.println("Cremallera A: "+Arrays.toString(mezclar(a, b, "cremalleraA")));
+		System.out.println("Cremallera Persona: "+Arrays.toString(mezclar(a, b, "cremalleraA")));
 		System.out.println("Cremallera B: "+Arrays.toString(mezclar(a, b, "cremalleraB")));
 	}
 
