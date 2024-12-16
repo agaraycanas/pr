@@ -1,4 +1,4 @@
-package t4._desarrolloClases.ej09;
+package t4._desarrolloClases.ej10;
 
 public class Limon {
 	private int peso;
@@ -13,6 +13,10 @@ public class Limon {
 	
 	public void comer() {
 		System.out.println("ffff... qué limón más ácido");
+	}
+	
+	public void setPeso(int peso) {
+		this.peso = peso;
 	}
 
 }
