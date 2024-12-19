@@ -1,4 +1,4 @@
-package _pruebas.desarroloClases;
+package _pruebas.desarrolloClases;
 
 public class Coche {
 	Rueda di;
