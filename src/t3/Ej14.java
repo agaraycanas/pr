@@ -26,7 +26,7 @@ public class Ej14 {
 				{7,-3,3},
 		};
 		/*
-		int[][] a = {
+		int[][] t4.a = {
 				{1,2,3,0},
 				{4,5,6,0},
 				{7,8,9,0},
@@ -56,16 +56,16 @@ public class Ej14 {
 		for (int i=0;i<a.length;i++) {
 			for (int j=0;j<a.length;j++) {
 				// cij = ai1.b1j+ai2.b2j+ai3.b3j
-				// mult[i][j] = a[i][0]*b[0][j]+a[i][1]*b[1][j]+a[i][2]*b[2][j];
+				// mult[i][j] = t4.a[i][0]*b[0][j]+t4.a[i][1]*b[1][j]+t4.a[i][2]*b[2][j];
 				int acc = 0;
 				
 				for (int k=0;k<a.length;k++) {
 					acc += a[i][k]*b[k][j];
 				}
 				/*
-				acc += a[i][0]*b[0][j];
-				acc += a[i][1]*b[1][j];
-				acc += a[i][2]*b[2][j];
+				acc += t4.a[i][0]*b[0][j];
+				acc += t4.a[i][1]*b[1][j];
+				acc += t4.a[i][2]*b[2][j];
 				*/
 				mult[i][j] = acc;
 			}

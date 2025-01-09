@@ -6,9 +6,9 @@ public class Ej11 {
 
 	public static void main(String[] args) {
 		int[] original = { 10, 4, 5, -6, 7, 1, 9 };
-		System.out.println("a \t\t= " + Arrays.toString(original));
+		System.out.println("t4.a \t\t= " + Arrays.toString(original));
 		int[] ordenado = burbuja(original);
-		System.out.println("a(ordenado)\t= " + Arrays.toString(ordenado));
+		System.out.println("t4.a(ordenado)\t= " + Arrays.toString(ordenado));
 	}
 
 	public static int[] clonar(int[] a) {

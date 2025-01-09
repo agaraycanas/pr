@@ -20,7 +20,7 @@ public class Ej19_con_mensaje {
 				if (numeroIncorrecto) {
 					System.out.print("INCORRECTO: ");
 				}
-				System.out.print("Introduce otro número superior a " + anterior + ": ");
+				System.out.print("Introduce otro número superior t4.a " + anterior + ": ");
 				int recienLeido = scan.nextInt();
 				numeroIncorrecto = (recienLeido <= anterior);
 				actual =  (recienLeido > anterior || recienLeido == 0) ? recienLeido : actual; 

@@ -67,11 +67,11 @@ public class Ej35 {
 
 	// =======================================================
 	public static void main(String[] args) {
-		System.out.println("a) Con while");
+		System.out.println("t4.a) Con while");
 		System.out.println("=========");
 		aWhile();
 
-		System.out.println("a) Con for");
+		System.out.println("t4.a) Con for");
 		System.out.println("=========");
 		aFor();
 

@@ -29,11 +29,11 @@ public class Ej23 {
 			mezclado[ (2*i) +1 	] 	= b[i];
 		}
 		
-		// Añadir el resto de a ó b en función de cuál sea el más grande de los dos
+		// Añadir el resto de t4.a ó b en función de cuál sea el más grande de los dos
 		//int c = 2*tamPeque;
 		for (int i= tamPeque; i<tamGrande ;i++) {
 			mezclado[i+tamPeque] = ( a.length==tamGrande ? a[i] : b[i] ) ;
-			//	mezclado[c] = ( a.length==tamGrande ? a[i] : b[i] ) ;
+			//	mezclado[c] = ( t4.a.length==tamGrande ? t4.a[i] : b[i] ) ;
 			//	c++;
 		}
 		
@@ -83,11 +83,11 @@ public class Ej23 {
 		return mezclado;
 	}
 	/*
-	private static int[] mezclarDA2(int[] a, int[] b) {
-		int[] mezclado = new int[a.length + b.length];
+	private static int[] mezclarDA2(int[] t4.a, int[] b) {
+		int[] mezclado = new int[t4.a.length + b.length];
 		int c = 0;
-		for (int i=0; i<a.length; i++) {
-			mezclado[c] = a[i];
+		for (int i=0; i<t4.a.length; i++) {
+			mezclado[c] = t4.a[i];
 			c++;
 		}
 		for (int i=0; i<b.length; i++) {

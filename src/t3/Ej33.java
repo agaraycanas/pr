@@ -60,7 +60,7 @@ public class Ej33 {
 	public static int cf(String fila) {
 		int f = -1;
 		String[] letraMay = { "Persona", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
-		String[] letraMin = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
+		String[] letraMin = { "t4.a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
 		for (int i = 0; i < 10; i++) {
 			if (fila.equals(letraMin[i]) || fila.equals(letraMin[i])) {
 				f = i;

@@ -16,7 +16,7 @@ public class Ej19__sin_mensaje {
 		if ( anterior != 0) {
 			do {
 				anterior = actual;
-				System.out.print("Introduce otro número superior a " + anterior + ": ");
+				System.out.print("Introduce otro número superior t4.a " + anterior + ": ");
 				int recienLeido = scan.nextInt();
 				actual =  (recienLeido > anterior || recienLeido == 0) ? recienLeido : actual; 
 			}

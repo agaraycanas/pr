@@ -8,7 +8,7 @@ public class Ej03 {
 		for (int i = 0; i < tam; i++) {
 			for (int j = 0; j < tam; j++) {
 				a[i][j] = Integer.parseInt ( args[  i*tam +  j       + 1 ] );
-				//a[i][j] = Integer.parseInt ( args[  c ] ); c++;
+				//t4.a[i][j] = Integer.parseInt ( args[  c ] ); c++;
 			}
 		}
 			

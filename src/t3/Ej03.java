@@ -8,8 +8,8 @@ public class Ej03 {
 		int[] suma = { a[0] + b[0], a[1] + b[1] };
 		/* Otra forma de hacerlo
 		int[] suma = new int[2];
-		suma[0] = a[0] + b[0];
-		suma[1] = a[1] + b[1];
+		suma[0] = t4.a[0] + b[0];
+		suma[1] = t4.a[1] + b[1];
 		*/
 		return suma;
 	}

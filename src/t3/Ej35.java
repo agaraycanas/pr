@@ -9,7 +9,7 @@ public class Ej35 {
 		for (int i=0;i<tam;i++) {
 			a[i] = dato;
 		}
-		//System.out.println(Arrays.toString(a));
+		//System.out.println(Arrays.toString(t4.a));
 		for (int i=0;i<tam;i++) {
 			System.out.print(a[i]+" ");
 		}

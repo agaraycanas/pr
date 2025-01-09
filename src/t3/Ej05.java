@@ -6,9 +6,9 @@ public class Ej05 {
 		mostrarImpares(a);
 		/*
 		System.out.println();
-		mostrarPares(a);
+		mostrarPares(t4.a);
 		System.out.println();
-		mostrarNumerosImpares(a);
+		mostrarNumerosImpares(t4.a);
 		*/
 	}
 

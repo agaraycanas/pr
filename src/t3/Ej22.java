@@ -48,11 +48,11 @@ public class Ej22 {
 	public static void main(String[] args) {
 		String[][] personas = { 
 				{ "X", 		"Y", 		"Z", 	"W" }, 
-				{ "pepe", 	"garcia", 	"1", 	"a" },
-				{ "ana", 	"sanchez", 	"2", 	"a" }, 
-				{ "perico", "palotes", 	"3", 	"a" }, 
-				{ "juan", 	"palomo", 	"4", 	"a" },
-				{ "maria", 	"sanchez", 	"6", 	"a" }, 
+				{ "pepe", 	"garcia", 	"1", 	"t4.a" },
+				{ "ana", 	"sanchez", 	"2", 	"t4.a" }, 
+				{ "perico", "palotes", 	"3", 	"t4.a" }, 
+				{ "juan", 	"palomo", 	"4", 	"t4.a" },
+				{ "maria", 	"sanchez", 	"6", 	"t4.a" }, 
 				};
 
 		System.out.println(toString(personas,"Z"));
