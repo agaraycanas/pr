@@ -1,4 +1,4 @@
-package examen;
+package examen.ex1;
 
 
 public class Ej01 {

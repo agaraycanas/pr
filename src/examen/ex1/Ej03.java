@@ -1,4 +1,4 @@
-package examen;
+package examen.ex1;
 
 public class Ej03 {
 	public static void main(String[] args) {

@@ -21,13 +21,22 @@ public class Main {
 	}
 
 	public static boolean esConsonante(char c) {
-		return !esVocal(c); // Devuelve que un carácter raro como un paréntesis es una consonante
+		boolean esLetra = (c>=65 && c<=90) || (c>=97 && c<=122);
+		return esLetra && !esVocal(c);
 	}
 
 	public static void main(String[] args) {
-		for (char c = 65; c <= 122; c++) {
-			System.out.println(c + ": " + (esVocal(c) ? "VOCAL" : ""));
-			System.out.println(c + ": " + (esConsonante(c) ? "CONSONANTE" : ""));
+		for (char c = 65; c <= 90; c++) {
+			System.out.println(c + ": " + (esVocal(c) ? "VOCAL" : "CONSONANTE"));
 		}
+
+		System.out.println("========================");
+		
+		for (char c = 97; c <= 122; c++) {
+			System.out.println(c + ": " + (esConsonante(c) ? "CONSONANTE" : "VOCAL"));
+		}
+		System.out.println("====================================");
+		System.out.println(esVocal(']'));
+		System.out.println(esConsonante(']'));
 	}
 }
