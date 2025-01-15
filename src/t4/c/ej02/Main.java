@@ -1,6 +1,10 @@
 package t4.c.ej02;
 
 public class Main {
+	
+	public static boolean esLetra(char c) {
+		return (c>=65 && c<=90) || (c>=97 && c<=122);		
+	}
 
 	public static boolean esVocal(char c) {
 		boolean sol = false;
@@ -21,8 +25,7 @@ public class Main {
 	}
 
 	public static boolean esConsonante(char c) {
-		boolean esLetra = (c>=65 && c<=90) || (c>=97 && c<=122);
-		return esLetra && !esVocal(c);
+		return esLetra(c) && !esVocal(c);
 	}
 
 	public static void main(String[] args) {
