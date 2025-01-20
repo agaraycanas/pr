@@ -14,4 +14,11 @@ public class Persona extends SerVivo {
 	public String toString() {
 		return this.nombre + "("+this.dni+")";
 	}
+	
+	public boolean equals(Object o) {
+		boolean sol = false;
+		//if (o instanceof Persona && ((Persona)o).dni.equals(this.dni) ) { sol = true; }
+		if ( o instanceof Tortuga) { sol = true; }
+		return sol;
+	}
 }
