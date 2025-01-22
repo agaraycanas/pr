@@ -1,6 +1,6 @@
 package _pruebas.herencia;
 
-public class Padre {
+public class Padre extends Hijo {
 
 
 	
