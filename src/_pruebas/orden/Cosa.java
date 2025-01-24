@@ -1,4 +1,4 @@
-package _pruebas.comparaciones;
+package _pruebas.orden;
 
 public class Cosa implements Comparable<Cosa> {
 
@@ -8,6 +8,7 @@ public class Cosa implements Comparable<Cosa> {
 		this.numero = numero;
 	}
 	
+
 	@Override
 	public boolean equals(Object otro) {
 		boolean sol = false;
@@ -19,7 +20,6 @@ public class Cosa implements Comparable<Cosa> {
 
 	public int compareTo(Cosa otro) {
 		int sol = 0;
-		
 		
 			if ( this.numero > otro.numero ) {
 				sol = 1;
