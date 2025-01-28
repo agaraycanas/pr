@@ -22,12 +22,14 @@ public class Ej11 {
 
 	public static int[] burbuja(int[] original) {
 		int[] copia = clonar(original);
+		System.out.println(Arrays.toString(copia));
 
 		for (int limite = copia.length - 2; limite >= 0; limite--) {
 			for (int i = 0; i <= limite; i++) {
 				if (copia[i] > copia[i + 1]) {
 					swap(copia, i, i + 1);
 				}
+				System.out.println(Arrays.toString(copia));
 			}
 		}
 		return copia;
@@ -38,4 +40,5 @@ public class Ej11 {
 		a[i] = a[j];
 		a[j] = aux;
 	}
+
 }

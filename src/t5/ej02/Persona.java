@@ -35,7 +35,27 @@ public class Persona implements Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		return 0;
+		Persona otra = (Persona)o;
+		return ordenarPorDNI(otra);
+	}
+
+	private int ordenarPorApellidoNombre(Persona otra) {
+		int sol = 0;
+		
+
+		return sol;
+	}
+	
+	private int ordenarPorDNI(Persona otra) {
+		int sol = 0;
+		if (this.dni > otra.dni ) {
+			sol = 1;
+		}
+		if (this.dni < otra.dni ) {
+			sol = -1;
+		}
+
+		return sol;
 	}
 
 }
