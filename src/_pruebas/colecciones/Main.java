@@ -1,43 +1,30 @@
 package _pruebas.colecciones;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class Main {
-	private static  void mostrar(Cromo[] x) {
-		for (int i=0; i<x.length ;i++) {
-			System.out.println( x[i] );
-		}
-	}
-	
-	private static  void mostrarLista(Collection x) {
-		//TODO
-	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes", "unused" })
 	public static void main(String[] args) {
-		Cromo c1 = new Cromo(1);
-		Cromo c2 = new Cromo(2);
-		Cromo c3 = new Cromo(3);
-		Cromo c4 = new Cromo(4);
-		Cromo c5 = new Cromo(4);
-
-		
-		Cromo[] cromos = new Cromo[4];
-		cromos[0] = c1; 
-		cromos[1] = c2; 
-		cromos[2] = c3; 
-		cromos[3] = c4;
 		
 		ArrayList bolsa = new ArrayList();
-		bolsa.add(c1);
-		bolsa.add(c2);
-		bolsa.add(c3);
-		bolsa.add(c4);
-		bolsa.add(c5);
+		ArrayList otraBolsa = new ArrayList();
+
+		bolsa.add(new Persona("1","A","B"));
+		bolsa.add(new Persona("2","C","D"));
+		bolsa.add(new Persona("3","E","F"));
+		bolsa.add(new Persona("4","G","H"));
+
+		otraBolsa.add(new Persona("3","E","F"));
+		otraBolsa.add(new Persona("7","A","B"));
 		
-		mostrar( cromos );
-		mostrarLista(bolsa);
+		Object[] a = {1,2};
+		Object[] ao = bolsa.toArray(a);
+		
+		for (int i=0; i<ao.length; i++) {
+			System.out.println( ao[i ]);
+		}
+
 		
 	}
 

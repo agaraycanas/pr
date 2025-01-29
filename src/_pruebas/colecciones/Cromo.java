@@ -5,12 +5,14 @@ public class Cromo {
 	public Cromo(int num) {
 		this.num = num;
 	}
+	
 	@Override
 	public String toString() {
 		return "(C)"+this.num+" ";
 	}
-	
-	public void pegar() {
-		
+
+	@Override
+	public boolean equals(Object otro) {
+		return  this.num ==  ((Cromo)otro).num;
 	}
 }
