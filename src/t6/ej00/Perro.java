@@ -27,5 +27,10 @@ public class Perro {
 		return "(P) "+this.collar+" "+this.peso;
 	}
 	
-	
+	// EJERCICIO 3
+	@Override
+	public boolean equals(Object otro) {
+		return 	otro instanceof Perro 			&& 
+				((Perro)otro).collar == this.collar;
+	}
 }

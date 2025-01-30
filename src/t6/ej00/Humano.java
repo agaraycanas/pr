@@ -26,4 +26,11 @@ public class Humano {
 	public String toString() {
 		return "(H) "+this.dni+" "+this.nombre;
 	}
+
+	// EJERCICIO 3
+	@Override
+	public boolean equals(Object otro) {
+		return 	otro instanceof Humano 			&& 
+				((Humano)otro).dni == this.dni;
+	}
 }

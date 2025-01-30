@@ -28,4 +28,13 @@ public class Gato {
 		return "(G) "+this.nombre+" "+this.peso;
 	}
 	
+	// EJERCICIO 3
+	@Override
+	public boolean equals(Object otro) {
+		return 	otro instanceof Gato 						&& 
+				((Gato)otro).nombre.equals (this.nombre) 	&&
+				((Gato)otro).peso 	== 		this.peso; 
+				
+	}
+	
 }
