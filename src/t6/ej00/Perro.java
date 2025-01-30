@@ -21,5 +21,11 @@ public class Perro {
 		System.out.println("GUAU");
 	}
 	
+	// EJERCICIO 2
+	@Override
+	public String toString() {
+		return "(P) "+this.collar+" "+this.peso;
+	}
+	
 	
 }

@@ -22,4 +22,10 @@ public class Gato {
 		System.out.println("MIAU");
 	}
 	
+	// EJERCICIO 2
+	@Override
+	public String toString() {
+		return "(G) "+this.nombre+" "+this.peso;
+	}
+	
 }

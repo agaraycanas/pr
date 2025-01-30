@@ -20,4 +20,10 @@ public class Humano {
 	public void saludar() {
 		System.err.println("HOLA");
 	}
+	
+	//EJERCICIO 2
+	@Override
+	public String toString() {
+		return "(H) "+this.dni+" "+this.nombre;
+	}
 }
