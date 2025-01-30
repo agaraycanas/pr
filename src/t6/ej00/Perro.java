@@ -1,6 +1,9 @@
 package t6.ej00;
 
-public class Perro {
+public class Perro 
+
+
+{
 	private int collar;
 	private float peso;
 	
@@ -33,4 +36,7 @@ public class Perro {
 		return 	otro instanceof Perro 			&& 
 				((Perro)otro).collar == this.collar;
 	}
+
+	
+
 }

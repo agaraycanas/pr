@@ -1,7 +1,9 @@
 package t6.ej00;
 
-public class Gato {
+public class Gato 
 
+
+{
 	private String nombre;
 	private float peso;
 	
@@ -36,5 +38,7 @@ public class Gato {
 				((Gato)otro).peso 	== 		this.peso; 
 				
 	}
+
+	
 	
 }

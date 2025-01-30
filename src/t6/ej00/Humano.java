@@ -1,6 +1,10 @@
 package t6.ej00;
 
-public class Humano {
+public class Humano 
+
+implements Comparable
+
+{
 	private int dni;
 	private String nombre;
 	
@@ -21,7 +25,7 @@ public class Humano {
 		System.err.println("HOLA");
 	}
 	
-	//EJERCICIO 2
+	// EJERCICIO 2
 	@Override
 	public String toString() {
 		return "(H) "+this.dni+" "+this.nombre;
@@ -33,4 +37,25 @@ public class Humano {
 		return 	otro instanceof Humano 			&& 
 				((Humano)otro).dni == this.dni;
 	}
+
+	// EJERCICIO 4
+	@Override
+	public int compareTo(Object o) {
+		int sol = 0;
+		
+		if (o instanceof Perro || o instanceof Gato ) {
+			sol = 1;
+		}
+
+		if (o instanceof Humano && ((Humano)o).dni < this.dni ) {
+			sol = 1;
+		}
+
+		if (o instanceof Humano && ((Humano)o).dni > this.dni ) {
+			sol = -1;
+		}
+
+		return sol;
+	}
+	
 }
