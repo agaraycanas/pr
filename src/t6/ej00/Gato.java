@@ -2,6 +2,7 @@ package t6.ej00;
 
 public class Gato 
 
+implements Comparable
 
 {
 	private String nombre;
@@ -39,6 +40,30 @@ public class Gato
 				
 	}
 
-	
+	// EJERCICIO 4
+	@Override
+	public int compareTo(Object o) {
+		int sol = 0;
+		
+		if (o instanceof Perro || o instanceof Humano ) {
+			sol = -1;
+		}
+
+		if (o instanceof Gato ) {
+			Gato otroGato = (Gato)o;
+			 sol = this.nombre.compareTo(otroGato.nombre);
+			 if (sol == 0) {
+				 if (this.peso > otroGato.peso ) {
+					 sol = -1;
+				 }
+				 if (this.peso < otroGato.peso ) {
+					 sol = 1;
+				 }
+			 }
+		}
+
+
+		return sol;
+	}	
 	
 }

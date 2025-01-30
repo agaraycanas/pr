@@ -2,6 +2,7 @@ package t6.ej00;
 
 public class Perro 
 
+implements Comparable
 
 {
 	private int collar;
@@ -37,6 +38,28 @@ public class Perro
 				((Perro)otro).collar == this.collar;
 	}
 
+	// EJERCICIO 4
+	@Override
+	public int compareTo(Object o) {
+		int sol = 0;
+		
+		if (o instanceof Humano) {
+			sol = -1;
+		}	
+		if ( o instanceof Gato ) {
+			sol = 1;
+		}
+
+		if (o instanceof Perro && ((Perro)o).collar < this.collar ) {
+			sol = 1;
+		}
+
+		if (o instanceof Perro && ((Perro)o).collar > this.collar ) {
+			sol = -1;
+		}
+
+		return sol;
+	}
 	
 
 }
