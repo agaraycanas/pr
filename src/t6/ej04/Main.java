@@ -35,7 +35,10 @@ public class Main {
 		
 		System.out.println("h1 ?? p1 " + h1.compareTo(p1)); // 1 (>0)
 		System.out.println("h1 ?? g1 " + h1.compareTo(g1)); // 1 (>0)
-		System.out.println("p1 ?? g1 " + p1.compareTo(g1)); // 1 (<0)
+		System.out.println("p1 ?? g1 " + p1.compareTo(g1)); // 1 (>0)
 		
+		System.out.println("p1 ?? h1 " + p1.compareTo(h1)); // -1 (<0)
+		System.out.println("g1 ?? h1 " + g1.compareTo(h1)); // -1 (<0)
+		System.out.println("g1 ?? p1 " + g1.compareTo(p1)); // -1 (<0)
 	}
 }
