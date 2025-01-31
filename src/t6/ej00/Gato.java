@@ -1,5 +1,7 @@
 package t6.ej00;
 
+import java.util.Objects;
+
 public class Gato 
 
 implements Comparable
@@ -66,4 +68,10 @@ implements Comparable
 		return sol;
 	}	
 	
+	
+	// EJERCICIO 5
+	@Override
+	public int hashCode() {
+		return Objects.hash ( this.nombre, this.peso);
+	}
 }
