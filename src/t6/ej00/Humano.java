@@ -58,4 +58,10 @@ implements Comparable
 		return sol;
 	}
 	
+	// EJERCICIO 5
+	@Override
+	public int hashCode() {
+		return this.dni ;
+	}
+	
 }

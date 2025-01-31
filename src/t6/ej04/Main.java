@@ -9,6 +9,12 @@ public class Main {
 
 		Humano h1 = new Humano(1, "Pepe");
 		Humano h2 = new Humano(1, "Pepe");
+
+		System.out.println(h1.hashCode());
+		System.out.println(h1);
+		System.out.println(h2.hashCode());
+		System.out.println(h2);
+		System.out.println("=============");
 		Humano h3 = new Humano(2, "María");
 
 		System.out.println("h1 ?? h2 " + h1.compareTo(h2)); // 0
