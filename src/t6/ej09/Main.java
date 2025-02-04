@@ -1,7 +1,7 @@
-package t6.ej06;
+package t6.ej09;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.TreeSet;
 
 import t6.ej00.Gato;
 import t6.ej00.Humano;
@@ -12,7 +12,7 @@ public class Main {
 	// H 1 Pepe H 1 Pepe H 2 Pepe P 1 10 P 1 10 P 2 10 G A 1 G A 1 G A 2 G B 1
 	public static void main(String[] args) {
 		
-		Collection animales = new ArrayList();
+		Collection animales = new TreeSet();
 		
 		for (int i=0; i<args.length; i += 3) {
 			switch (args[i]) {
