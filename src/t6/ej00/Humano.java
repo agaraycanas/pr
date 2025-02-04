@@ -39,7 +39,6 @@ implements Comparable
 	}
 
 	// EJERCICIO 4
-	@Override
 	public int compareTo(Object o) {
 		int sol = 0;
 		
