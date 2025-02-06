@@ -22,7 +22,7 @@ implements Comparable
 	}
 	
 	public void saludar() {
-		System.err.println("HOLA");
+		System.out.println("HOLA, soy "+this.nombre+"("+this.dni+")");
 	}
 	
 	// EJERCICIO 2

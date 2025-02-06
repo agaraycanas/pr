@@ -21,12 +21,14 @@ public class Main {
 		
 		Iterator i = personas.iterator();
 		
+		System.out.println("Con iterator ===========");
+
 		while (i.hasNext()) {
 			Object o = i.next();
 			((Humano)o).saludar();
 		}
 		
-		System.out.println("FIN");
+		System.out.println("Con for ===========");
 		
 		for (  Object o :  personas  ) {
 			((Humano)o).saludar();

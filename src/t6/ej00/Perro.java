@@ -1,8 +1,11 @@
 package t6.ej00;
 
+
+
 public class Perro 
 
-implements Comparable
+implements 	Comparable
+			,Mascota // ej 15
 
 {
 	private int collar;
@@ -22,7 +25,7 @@ implements Comparable
 	}
 	
 	public void saludar() {
-		System.out.println("GUAU");
+		System.out.println("GUAU. Soy "+this.collar+" de "+this.peso+" Kg.");
 	}
 	
 	// EJERCICIO 2

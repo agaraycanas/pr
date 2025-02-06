@@ -4,7 +4,8 @@ import java.util.Objects;
 
 public class Gato 
 
-implements Comparable
+implements 	Comparable
+			,Mascota // ej 15
 
 {
 	private String nombre;
@@ -24,7 +25,7 @@ implements Comparable
 	}
 	
 	public void saludar() {
-		System.out.println("MIAU");
+		System.out.println("MIAU. Soy "+this.nombre+" de "+this.peso+" Kg.");
 	}
 	
 	// EJERCICIO 2
