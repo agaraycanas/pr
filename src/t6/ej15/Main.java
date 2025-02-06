@@ -25,19 +25,14 @@ public class Main {
 		mascotas.add(new Gato("Micifu", 20));
 		mascotas.add(new Gato("Cuki", 10));
 
-		mascotas.add(new Humano(10, "Pepe"));
-
 		mascotas.add(new Perro(10, 100f));
+
+		//mascotas.add(new Humano(1,"Pepe"));
 
 		System.out.println(mascotas);
 
 		for (Object o : mascotas) {
-			if (o instanceof Mascota) {
 				((Mascota) o).saludar();
-			}
-			if (o instanceof Humano) {
-				((Humano) o).saludar();
-			}
 		}
 	}
 }
