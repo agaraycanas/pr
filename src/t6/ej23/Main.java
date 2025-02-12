@@ -1,8 +1,11 @@
 package t6.ej23;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -25,7 +28,19 @@ public class Main {
 	}
 
 	private static void listadoDeEquipos(Map<String, String> equipo) {
-		System.out.println( equipo.values() );
+		/* OPCIÓN 1
+		TreeSet<String> ord = new TreeSet<>();
+		for (String eq : equipo.values()) {
+			ord.add(eq);
+		}
+		System.out.println(ord);
+		*/
+		/* OPCIÓN 2
+		TreeSet<String> ord = new TreeSet<>();
+		ord.addAll(equipo.values());
+		System.out.println(ord);
+		*/
+		System.out.println(new TreeSet<String>(equipo.values()));
 	}
 
 	private static void listadoDeAlumnos(Map<String, String> equipo) {
