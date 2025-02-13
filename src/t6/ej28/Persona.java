@@ -1,8 +1,9 @@
-package t6.ej27;
+package t6.ej28;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-public class Persona {
+public class Persona  {
 	private int dni;
 	private String nombre;
 	private String apellido;
@@ -51,14 +52,20 @@ public class Persona {
 	public LocalDate getfNac() {
 		return fNac;
 	}
+	
+	@Override
+	public int hashCode() {
+		Persona yo = (Persona)this;
+		return yo.dni;
+	}
 
 	public void setfNac(LocalDate fNac) {
 		this.fNac = fNac;
 	}
 
-	public int compareTo(Object o) {
+	/*
+	public int compareTo(Persona otra) {
 		int sol = 0;
-		Persona otra = (Persona)o;
 		if ( this.dni > otra.dni) {
 			sol = 1;
 		}
@@ -68,5 +75,6 @@ public class Persona {
 		
 		return sol;
 	}
+	*/
 
 }
