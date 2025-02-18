@@ -1,4 +1,4 @@
-package t8.ej01;
+package t8.ej02;
 
 public class UpperCaseException extends Exception {
 	public UpperCaseException(String mensaje) {
