@@ -1,32 +1,45 @@
 package _pruebas.excepciones.masejemplos;
 
-import java.util.Random;
+class Caja {
+	private int x;
+
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+}
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
-		for (int i = 0; i < 4; i++) {
-			try {
-				metodoPeligroso();
-			} catch (Exception e) {
-				System.out.println("Algo ha ido mal");
-				//System.out.println(e.getMessage());
-				System.out.println(e.getMessage().equals("A") ? "CATAPÚM" : "UUY");
-			}
-			System.out.println("=============");
+	public static void main(String[] args) {
+		Caja caja = new Caja();
+		int resultado = dividir(3000, 2, caja);
+		 if ( resultado  == -1 ) {
+			 System.out.println("El divisor es cero");
+		 }
+		 else if (resultado == -2) {
+			 System.out.println("El dividendo no puede ser superior a 2000");
+		 }
+		 else {
+			 System.out.println(caja.getX());
+		 }
+		 
+		 System.out.println("FIN");
+	}
+
+	public static int dividir(int dividendo, int divisor, Caja resultado) {
+		int status = 0;
+		if (divisor == 0) {
+			status = -1;
 		}
-
-	}
-
-	private static void metodoPeligroso() throws Exception {
-		System.out.println("Comienza el método peligroso");
-		int azar = new Random().nextInt(2);
-		System.out.println(azar);
-		lanzarBomba(azar);
-		System.out.println("Termina el método peligroso");
-	}
-
-	private static void lanzarBomba(int azar) throws Exception {
-		throw new Exception( (azar%2)==0 ? "A" : "B");
+		else if (dividendo > 2000) {
+			status = -2;
+		}
+		else {
+			resultado.setX(dividendo / divisor );
+		}
+		return status;
 	}
 }

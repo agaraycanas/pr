@@ -24,11 +24,11 @@ public class Main extends A {
 		a.publico();
 		a.protegido();
 		a.paquete();
-		//t4.a.privado();
+		//t04.a.privado();
 		a.metodo();
 		System.out.println(a.aPublico);
 		System.out.println(a.aProtegido);
 		System.out.println(a.aPaquete);
-		//System.out.println(t4.a.aPrivado);
+		//System.out.println(t04.a.aPrivado);
 	}
 }

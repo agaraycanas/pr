@@ -6,7 +6,7 @@ public class Ej02 {
 		
 		/*
 		for (int i=0;i<tam;i++) {
-			t4.a[i] = Integer.parseInt (args [i+1]);
+			t04.a[i] = Integer.parseInt (args [i+1]);
 		}
 		*/
 		

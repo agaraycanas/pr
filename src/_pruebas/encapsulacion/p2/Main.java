@@ -24,12 +24,12 @@ public class Main extends A {
 		System.out.println("USO POR COMPOSICION");
 		A a = new A();
 		a.publico();
-		//t4.a.protegido();
-		//t4.a.paquete();
-		//t4.a.privado();
+		//t04.a.protegido();
+		//t04.a.paquete();
+		//t04.a.privado();
 		System.out.println(a.aPublico);
-		//System.out.println(t4.a.aProtegido);
-		//System.out.println(t4.a.aPaquete);
-		//System.out.println(t4.a.aPrivado);
+		//System.out.println(t04.a.aProtegido);
+		//System.out.println(t04.a.aPaquete);
+		//System.out.println(t04.a.aPrivado);
 	}
 }
