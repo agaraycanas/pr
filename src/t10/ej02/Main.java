@@ -1,24 +1,13 @@
-package t10.ej01;
+package t10.ej02;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
-	private static String concatenar(String[] palabras) {
-		String sol = "";
-		int cont = 1;
-		for ( String palabra : palabras ) {
-			sol += palabra + (cont == palabras.length ? "" : " ");
-			cont++;
-		}
-		return sol;
-	}
-
 	public static void main(String[] args) {
 		try {
-			//String contenido = concatenar(args);
 			String contenido = String.join(" ", args);
-			FileWriter f = new FileWriter("../archivo.txt");
+			FileWriter f = new FileWriter("../" + args[0] + ".txt");
 			f.write(contenido);
 			System.out.println("Archivo creado");
 			f.close();
@@ -27,7 +16,6 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println("FIN");
-		
 	}
 
 }
