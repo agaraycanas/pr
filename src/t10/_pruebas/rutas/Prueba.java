@@ -1,4 +1,4 @@
-package t10.pruebas.rutas;
+package t10._pruebas.rutas;
 
 import java.io.File;
 import java.io.IOException;
