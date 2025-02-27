@@ -19,9 +19,9 @@ public class Main {
 	}
 
 	private static void crearFicheros(int n) {
-	
-		for (int i=1;i<=n;i++) {
-			crearFichero(i,"uno");
+		String[] carpeta = { "uno" , "dos" , "tres" };
+		for (int i=0;i<n;i++) {
+			crearFichero(i+1,carpeta[i%3]);
 		}
 	}
 	
