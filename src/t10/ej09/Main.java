@@ -1,4 +1,4 @@
-package t10.ej08;
+package t10.ej09;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -36,7 +36,7 @@ public class Main {
 			String linea;
 			while ((linea = br.readLine()) != null) {
 				String[] dato = linea.split(":");
-				Persona persona = new Persona( dato[0] , dato[1]);
+				Persona persona = new Persona( dato[1] , dato[2], Integer.parseInt( dato[0] ) );
 				personas.add(persona);
 				nLinea++;
 			}
