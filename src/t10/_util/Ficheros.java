@@ -2,6 +2,8 @@ package t10._util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +40,29 @@ public class Ficheros {
 			}
 		}
 		return lineas;
+	}
+
+	public static void escribir(String nombreArchivo, String linea) {
+		FileWriter fw = null;
+		PrintWriter pw = null;
+
+		try {
+			String ruta = "src/t10/_files/";
+			//String ruta = "../src/t10/_files/";
+			fw = new FileWriter(ruta+nombreArchivo , true); // (ruta,true) para añadir
+			pw = new PrintWriter(fw);
+			pw.println(linea);
+		} catch (Exception e) {
+			System.out.println("Error al escribir " + e.getMessage());
+		} finally {
+			try {
+				if (fw != null) {
+					fw.close();
+				}
+			} catch (Exception e) {
+				System.out.println("Error al cerrar " + e.getMessage());
+			}
+		}
 	}
 
 }
