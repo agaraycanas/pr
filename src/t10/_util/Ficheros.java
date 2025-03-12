@@ -42,16 +42,17 @@ public class Ficheros {
 		return lineas;
 	}
 
-	public static void escribir(String nombreArchivo, String linea) {
+	public static void escribir(String nombreArchivo, String linea, boolean append, boolean rutaAlternativa) {
 		FileWriter fw = null;
 		PrintWriter pw = null;
 
 		try {
-			String ruta = "src/t10/_files/";
-			//String ruta = "../src/t10/_files/";
-			fw = new FileWriter(ruta+nombreArchivo , true); // (ruta,true) para añadir
+			String ruta = rutaAlternativa?"../src/t10/_files/":"src/t10/_files/";
+			fw = new FileWriter(ruta+nombreArchivo , append); 
 			pw = new PrintWriter(fw);
-			pw.println(linea);
+			if (!linea.equals("")) {
+				pw.println(linea);
+			}
 		} catch (Exception e) {
 			System.out.println("Error al escribir " + e.getMessage());
 		} finally {
