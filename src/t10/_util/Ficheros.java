@@ -13,6 +13,13 @@ public class Ficheros {
 		return leer(nombre,false,true);
 	}
 	
+	/**
+	 * <p>Añade una linea al final del archivo especificado.</p>
+	 * <p>Se asume que estoy funcionando desde el IDE y <b>NO</b> desde la
+	 * linea de comandos (utilizando argumentos de entrada)
+	 * @param nombreArchivo el nombre del archivo en el que se escribe
+	 * @param linea que se añadirá AL FINAL del archivo
+	 */
 	public static void escribir(String nombreArchivo, String linea) {
 		escribir(nombreArchivo,linea,true,false);
 	}
@@ -50,6 +57,14 @@ public class Ficheros {
 		return lineas;
 	}
 
+	/**
+	 * 
+	 * @param nombreArchivo el nombre del archivo a escribir en la carpeta "src/t10/_files" 
+	 * @param linea la linea a escribir
+	 * @param append añade la linea al final del fichero si <code>true</code>. Destruye el contenido
+	 * inicial del fichero en caso contrario
+	 * @param rutaAlternativa <code>true</code> si estamos trabajando desde el terminal. <code>false</code> en caso contrario
+	 */
 	public static void escribir(String nombreArchivo, String linea, boolean append, boolean rutaAlternativa) {
 		FileWriter fw = null;
 		PrintWriter pw = null;
