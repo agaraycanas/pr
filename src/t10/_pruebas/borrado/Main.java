@@ -27,6 +27,7 @@ public class Main {
         }
 	}
 
+	@SuppressWarnings("unused")
 	private static void crearArchivo() {
 		String ruta = "src/t10/_pruebas/borrado/";
 		File archivo = new File(ruta+"archivo.txt");

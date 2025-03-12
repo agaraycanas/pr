@@ -9,9 +9,17 @@ import java.util.List;
 
 public class Ficheros {
 
+	public static List<String> leer(String nombre) {
+		return leer(nombre,false,true);
+	}
+	
+	public static void escribir(String nombreArchivo, String linea) {
+		escribir(nombreArchivo,linea,true,false);
+	}
+	
 	public static List<String> leer(String nombre, boolean rutaAlternativa, boolean silencioso) {
 
-		String ruta = (rutaAlternativa ? "src/t10/_files/" : "../src/t10/_files/");
+		String ruta = (rutaAlternativa ? "../src/t10/_files/" : "src/t10/_files/");
 		FileReader fr = null;
 		BufferedReader br = null;
 		ArrayList<String> lineas = new ArrayList<>();
