@@ -1,3 +1,5 @@
-que
-oro
-precioso
+Real Madrid:blue
+Atlético de Madrid:red
+Champions:orange
+Vinicius:green
+Carlo Ancelotti:green
