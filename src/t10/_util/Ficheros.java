@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Ficheros {
 
+	
 	public static List<String> leer(String nombre) {
 		return leer(nombre,false,true);
 	}
@@ -20,6 +21,11 @@ public class Ficheros {
 	 * @param nombreArchivo el nombre del archivo en el que se escribe
 	 * @param linea que se añadirá AL FINAL del archivo
 	 */
+	
+	public static void nuevoArchivo(String nombreArchivo) {
+		escribir(nombreArchivo,"",false,false);
+	}
+	
 	public static void escribir(String nombreArchivo, String linea) {
 		escribir(nombreArchivo,linea,true,false);
 	}

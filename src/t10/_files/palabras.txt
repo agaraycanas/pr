@@ -1,5 +1,5 @@
-Real Madrid:blue
+Real Madrid:red
 Atletico de Madrid:red
-Champions:orange
+Champions:blue
 Vinicius:green
 Carlo Ancelotti:green

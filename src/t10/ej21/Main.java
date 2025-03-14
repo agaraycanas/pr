@@ -1,7 +1,9 @@
 package t10.ej21;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import static t10._util.Ficheros.leer;
@@ -17,24 +19,30 @@ public class Main {
 		System.out.println("FIN PROCESO");
 	}
 
-	private static Set<String> obtenerSetPalabras() {
-		HashSet<String> palabras = new HashSet<>();
+	private static Map<String,String> obtenerMapPalabras() {
+		HashMap<String,String> colores = new HashMap<>();
 		List<String> lineas = leer("palabras.txt");
 		for ( String linea : lineas) {
-			palabras.add( linea.split(":")[0] );
+			String[] parte = linea.split(":");
+			colores.put(parte[0], parte[1]);
 		}
-		//System.out.println(palabras); //TODO DEBUG
-		return palabras; 
+		return colores; 
 	}
 	
 	private static void generarBody() {
 		escribir(s, "<body>");
 		
 		List<String> lineas = leer("original.txt");
-		Set<String> palabras = obtenerSetPalabras();
+		Map<String,String> colores = obtenerMapPalabras();
 		for (String linea : lineas) {
-			for ( String palabra: palabras) {
-				linea = linea.replaceAll(palabra, "*****");
+			for ( String  palabra : colores.keySet()) {
+				String palabraFormateada = 
+						"<span class=\"" + 
+						colores.get(palabra) +
+						"\">" + 
+						palabra +
+						"</span>";
+				linea = linea.replaceAll(palabra, palabraFormateada);
 			}
 			escribir(s, linea);
 		}
