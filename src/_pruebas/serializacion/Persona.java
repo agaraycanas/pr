@@ -1,19 +1,28 @@
 package _pruebas.serializacion;
 
-import java.io.Serializable;
-
-public class Persona implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -9154256494098523338L;
-
-	private String dni;
+public class Persona {
+	private int dni;
 	private String nombre;
-	public String getDni() {
+	private Persona padre;
+	private Persona madre;
+	
+	
+	public Persona getPadre() {
+		return padre;
+	}
+	public void setPadre(Persona padre) {
+		this.padre = padre;
+	}
+	public Persona getMadre() {
+		return madre;
+	}
+	public void setMadre(Persona madre) {
+		this.madre = madre;
+	}
+	public int getDni() {
 		return dni;
 	}
-	public void setDni(String dni) {
+	public void setDni(int dni) {
 		this.dni = dni;
 	}
 	public String getNombre() {
@@ -22,10 +31,18 @@ public class Persona implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Persona(String dni, String nombre) {
+	public Persona(int dni, String nombre, Persona padre, Persona madre) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
+		this.padre = padre;
+		this.madre = madre;
 	}
+	
+	@Override
+	public String toString() {
+		return "["+this.dni+"]"+this.nombre + "(" + this.padre.getDni() +","+ this.madre.getDni() +")";
+	}
+	
 	
 }
