@@ -19,7 +19,8 @@ public class Recuperar {
 		for ( String personaString : personasString ) {
 			String[] parte = personaString.split(separador);
 			int dni = Integer.parseInt (parte[0]);
-			Persona p = new Persona (dni,parte[1]); 
+			//Persona p = new Persona (dni,parte[1]);
+			Persona p = null;
 			personas.add(p);
 		}
 		
