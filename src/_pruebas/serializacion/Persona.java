@@ -1,6 +1,8 @@
 package _pruebas.serializacion;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
 	private int dni;
 	private String nombre;
 	private Persona padre;
@@ -39,9 +41,20 @@ public class Persona {
 		this.madre = madre;
 	}
 	
+	public Persona(int dni, String nombre) {
+		this.dni = dni;
+		this.nombre = nombre;
+	}
 	@Override
 	public String toString() {
-		return "["+this.dni+"]"+this.nombre + "(" + this.padre.getDni() +","+ this.madre.getDni() +")";
+		return 	"["+this.dni+"]" + 
+				this.nombre + 
+				"(" + 
+				(this.padre!=null?this.padre.getDni():"-") +
+				"," + 
+				(this.madre!=null?this.madre.getDni():"-")+
+				")"
+				;
 	}
 	
 	

@@ -1,3 +1,7 @@
 1:Adan:null:null
 2:Eva:null:null
-10:Pepe:1:2
+3:Madre2:null:null
+10:Cain:1:2
+11:Abel:1:2
+14:Hijo1:10:3
+15:Hijo2:10:3
