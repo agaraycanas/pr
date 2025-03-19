@@ -1,10 +1,11 @@
 package _pruebas.serializacion;
 
 import static t10._util.Ficheros.leer;
-
+import java.util.ArrayList;
 import java.util.List;
-
 import com.google.gson.Gson;
+import java.lang.reflect.Type;
+import com.google.gson.reflect.TypeToken;
 
 public class RecuperarJSON {
 
@@ -14,8 +15,9 @@ public class RecuperarJSON {
 		List<String> lineas = leer(fichero);
 		Gson g = new Gson();
 		for (String linea :  lineas ) {
-			Persona p = g.fromJson(linea, Persona.class);
-			System.out.println(p);
+			Type personaListType = new TypeToken<List<Persona>>(){}.getType();
+			ArrayList<Persona> personas = g.fromJson(linea, personaListType);
+			System.out.println(personas);
 		}
 	}
 
