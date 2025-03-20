@@ -9,17 +9,26 @@ public class Main {
 		ArrayList<Carta> cartas = inicializarCartas();
 		List<Jugador> jugadores = inicializarJugadores();
 		repartir(cartas,jugadores);
+		mostrarEstadoJugadores(jugadores);
+	}
+
+	private static void mostrarEstadoJugadores(List<Jugador> jugadores) {
+		for ( Jugador jugador: jugadores) {
+			System.out.println(jugador);
+		}
 	}
 
 	private static void repartir(ArrayList<Carta> cartas, List<Jugador> jugadores) {
 		for (  Jugador jugador : jugadores ) {
-			boolean terminar = false;
-			
-			while (!terminar) {
-				Carta cartaAlAzar = Cartas.azar();
-				if (cartas.contains(cartaAlAzar)) {
-					// Se la doy
-					terminar = true;
+			for (int i=0;i<4;i++) {
+				boolean terminar = false;
+				while (!terminar) {
+					Carta cartaAlAzar = Cartas.azar();
+					if (cartas.contains(cartaAlAzar)) {
+						jugador.getCartas().add(cartaAlAzar); // Se la doy
+						cartas.remove(cartaAlAzar); // La quito del mazo
+						terminar = true;
+					}
 				}
 			}
 			

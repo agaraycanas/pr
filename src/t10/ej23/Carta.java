@@ -44,4 +44,17 @@ public class Carta implements Comparable<Carta>{
 		return nombre[this.numero] + " de " + this.palo;
 	}
 	
+	@Override
+	public boolean equals(Object otroObjeto) {
+		boolean sol = false;
+		if (otroObjeto instanceof Carta) {
+			Carta otraCarta = (Carta)otroObjeto;
+			sol = 
+					this.numero == otraCarta.numero && 
+					this.palo.equals(otraCarta.palo);
+					;
+		}
+		return sol;
+	}
+	
 }
