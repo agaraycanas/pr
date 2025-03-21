@@ -1,0 +1,13 @@
+[
+	{
+		"numero":1,
+		"cartas":
+			[
+				{"numero":3,"palo":"oros"},
+				{"numero":6,"palo":"oros"},
+				{"numero":6,"palo":"espadas"},
+				{"numero":5,"palo":"bastos"}
+			]
+	},
+	
+	{"numero":2,"cartas":[{"numero":6,"palo":"bastos"},{"numero":1,"palo":"bastos"},{"numero":2,"palo":"bastos"},{"numero":4,"palo":"espadas"}]},{"numero":3,"cartas":[{"numero":7,"palo":"oros"},{"numero":12,"palo":"espadas"},{"numero":7,"palo":"copas"},{"numero":11,"palo":"oros"}]},{"numero":4,"cartas":[{"numero":11,"palo":"bastos"},{"numero":2,"palo":"oros"},{"numero":3,"palo":"espadas"},{"numero":11,"palo":"espadas"}]}]

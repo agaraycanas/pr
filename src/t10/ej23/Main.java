@@ -1,26 +1,65 @@
 package t10.ej23;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-	public static void main(String[] args) {
-		ArrayList<Carta> cartas = inicializarCartas();
-		List<Jugador> jugadores = inicializarJugadores();
-		repartir(cartas,jugadores);
+public class Main {
+	private static String ruta = "src/t10/_files/";
+	private static String nombreFichero = "estado.json";
+
+	public static void main(String[] args) throws IOException {
+		ArrayList<Carta> 	cartas = null;
+		List<Jugador> 		jugadores = null;
+
+		if (existeFichero()) {
+			recuperarEstadoJugadores(jugadores);
+		} else {
+			cartas 		= inicializarCartas();
+			jugadores 	= inicializarJugadores();
+			repartir(cartas, jugadores);
+			guardarEstadoJugadores(jugadores);
+		}
 		mostrarEstadoJugadores(jugadores);
 	}
 
+	private static void recuperarEstadoJugadores(List<Jugador> jugadores) {
+		Gson g = new Gson();
+		Type tipoLista = new TypeToken<List<Jugador>>(){}.getType();
+		//String json = // leer el archivo estado.json; 
+		//jugadores = g.fromJson(json, tipoLista);
+	}
+
+	private static boolean existeFichero() {
+		File fichero = new File(ruta + nombreFichero);		
+		return fichero.exists();
+	}
+
+	private static void guardarEstadoJugadores(List<Jugador> jugadores) throws IOException {
+		Gson g = new Gson();
+		String json = g.toJson(jugadores);
+		FileWriter fw = new FileWriter(ruta + nombreFichero);
+		PrintWriter pw = new PrintWriter(fw);
+		pw.println(json);
+		pw.close();
+	}
+
 	private static void mostrarEstadoJugadores(List<Jugador> jugadores) {
-		for ( Jugador jugador: jugadores) {
+		for (Jugador jugador : jugadores) {
 			System.out.println(jugador);
 		}
 	}
 
 	private static void repartir(ArrayList<Carta> cartas, List<Jugador> jugadores) {
-		for (  Jugador jugador : jugadores ) {
-			for (int i=0;i<4;i++) {
+		for (Jugador jugador : jugadores) {
+			for (int i = 0; i < 4; i++) {
 				boolean terminar = false;
 				while (!terminar) {
 					Carta cartaAlAzar = Cartas.azar();
@@ -31,17 +70,17 @@ public class Main {
 					}
 				}
 			}
-			
+
 		}
 	}
 
 	private static ArrayList<Carta> inicializarCartas() {
-		String[] palos = { "oros", "copas", "espadas", "bastos"};
+		String[] palos = { "oros", "copas", "espadas", "bastos" };
 		ArrayList<Carta> sol = new ArrayList<>();
-		for (int i=1;i<=12;i++) {
-			if (i != 8 && i!= 9) {
-				for ( String palo : palos)  {
-					sol.add( new Carta(i,palo) );
+		for (int i = 1; i <= 12; i++) {
+			if (i != 8 && i != 9) {
+				for (String palo : palos) {
+					sol.add(new Carta(i, palo));
 				}
 			}
 		}
@@ -51,11 +90,10 @@ public class Main {
 
 	private static List<Jugador> inicializarJugadores() {
 		ArrayList<Jugador> sol = new ArrayList<Jugador>();
-		for (int i=1; i<=4; i++) {
-			sol.add( new Jugador(i));
+		for (int i = 1; i <= 4; i++) {
+			sol.add(new Jugador(i));
 		}
 		return sol;
 	}
-	
 
 }
