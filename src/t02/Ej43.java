@@ -7,7 +7,7 @@ public class Ej43 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Introduce t04.a (1..20): ");
+		System.out.print("Introduce t05.a (1..20): ");
 		int a = scan.nextInt();
 
 		System.out.println("===============");

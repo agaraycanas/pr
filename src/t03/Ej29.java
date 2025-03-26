@@ -67,7 +67,7 @@ public class Ej29 {
 	public static int cf(String fila) {
 		int f = -1;
 		String[] letraMay = {"Persona","B","C","D","E","F","G","H","I","J"};
-		String[] letraMin = {"t04.a","b","c","d","e","f","g","h","i","j"};
+		String[] letraMin = {"t05.a","b","c","d","e","f","g","h","i","j"};
 		for (int i=0;i<10;i++) {
 			if (fila == letraMay[i] || fila == letraMin[i] ) {
 				f=i;

@@ -20,15 +20,15 @@ public class Ej07 {
 	
 	public static void main(String[] args) {
 		if ( args.length >= 2) {
-			//int[] t04.a = obtenerArrayConvertidoAInt(args);
+			//int[] t05.a = obtenerArrayConvertidoAInt(args);
 			String[] a = obtenerArray(args);
 			
 			int n = Integer.parseInt(args[0]);
-			//mostrarDeNenN(t04.a,1);
+			//mostrarDeNenN(t05.a,1);
 			mostrarDeNenNenString(a,1);
 			System.out.println();
 			System.out.println("Salto: "+n);
-			//mostrarDeNenN(t04.a,n);
+			//mostrarDeNenN(t05.a,n);
 			mostrarDeNenNenString(a,n);
 		}
 		else {

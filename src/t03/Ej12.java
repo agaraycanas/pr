@@ -8,9 +8,9 @@ public class Ej12 {
 
 		int[] original = convertir(args);
 
-		System.out.println("t04.a \t\t= " + Arrays.toString(original));
+		System.out.println("t05.a \t\t= " + Arrays.toString(original));
 		int[] ordenado = burbuja(original);
-		System.out.println("t04.a(ordenado)\t= " + Arrays.toString(ordenado));
+		System.out.println("t05.a(ordenado)\t= " + Arrays.toString(ordenado));
 	}
 
 	public static int[] convertir(String[] args) {

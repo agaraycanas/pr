@@ -11,7 +11,7 @@ public class Ej05 {
 
 		System.out.println("=================INI================");
 		switch (letra) {
-		case "t04.a", "e", "i", "o", "u", "Persona", "E", "I", "O", "U":
+		case "t05.a", "e", "i", "o", "u", "Persona", "E", "I", "O", "U":
 			System.out.println("vocal");
 			break;
 		default:

@@ -18,10 +18,10 @@ public class Ej27 {
 		int a;
 		int b;
 		
-		System.out.println("Dime un número t04.a: ");
+		System.out.println("Dime un número t05.a: ");
 		a = s.nextInt();
 		
-		System.out.println("Dime un número b (mayor o igual que t04.a): ");
+		System.out.println("Dime un número b (mayor o igual que t05.a): ");
 		b = s.nextInt();
 		
 		for (int i = a; i <= b; i++) {
