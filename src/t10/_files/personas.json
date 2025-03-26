@@ -1,1 +1,0 @@
-[{"dni":1,"nombre":"Adán"},{"dni":2,"nombre":"Eva"},{"dni":3,"nombre":"Caín","padre":{"dni":1,"nombre":"Adán"},"madre":{"dni":2,"nombre":"Eva"}}]

@@ -1,6 +1,8 @@
 package t10.ej23;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,21 +22,26 @@ public class Main {
 		List<Jugador> 		jugadores = null;
 
 		if (existeFichero()) {
-			recuperarEstadoJugadores(jugadores);
+			System.out.println("RECUPERANDO");
+			jugadores = recuperarEstadoJugadores();
 		} else {
+			System.out.println("GENERANDO nueva PARTIDA");
 			cartas 		= inicializarCartas();
 			jugadores 	= inicializarJugadores();
 			repartir(cartas, jugadores);
+			System.out.println("GUARDANDO");
 			guardarEstadoJugadores(jugadores);
 		}
 		mostrarEstadoJugadores(jugadores);
 	}
 
-	private static void recuperarEstadoJugadores(List<Jugador> jugadores) {
+	private static List<Jugador> recuperarEstadoJugadores() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader (ruta + nombreFichero));
+        String json = br.readLine();
 		Gson g = new Gson();
 		Type tipoLista = new TypeToken<List<Jugador>>(){}.getType();
-		//String json = // leer el archivo estado.json; 
-		//jugadores = g.fromJson(json, tipoLista);
+		List<Jugador> jugadores = g.fromJson(json, tipoLista);
+		return jugadores;
 	}
 
 	private static boolean existeFichero() {
