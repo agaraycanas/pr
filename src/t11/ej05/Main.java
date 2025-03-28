@@ -33,11 +33,11 @@ public class Main {
 	private static void procesarStream() {
 		System.out.println(
 				l.stream()
-					.map(a->a-3)
-					.filter(a->a>0)
-					.map(a->a*2)
-					.map(a->a-1)
-					.filter(a->a>=50&&a<=75)
+					.map	(a->a-3)
+					.filter	(a->a>0)
+					.map	(a->a*2)
+					.map	(a->a-1)
+					.filter	(a->a>=50&&a<=75)
 					.collect(Collectors.toList())
 		);
 	}
