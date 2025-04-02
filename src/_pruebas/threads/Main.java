@@ -1,11 +1,14 @@
 package _pruebas.threads;
 
 public class Main {
-	public static void main(String[] args) {
-		Thread t1 = new Thread(new Uno());
-		t1.start();
 
-		Thread t2 = new Thread(new Dos());
-		t2.start();
+	public static void main(String[] args) {
+		Uno uno = new Uno();
+		Dos dos = new Dos();
+		Thread tUno = new Thread(uno);
+		Thread tDos = new Thread(dos);
+		tUno.start();
+		tDos.start();
 	}
+
 }

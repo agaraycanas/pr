@@ -5,15 +5,15 @@ import java.util.Random;
 public class Dos implements Runnable {
 	@Override
 	public void run() {
-		while (true) {
-			System.out.println("DOS comienza...");
-			esperar();
-			System.out.println("DOS termina");
-		}
+		accion();
 	}
 
-	private void esperar() {
-		try {Thread.sleep(new Random().nextInt(5000));} catch (InterruptedException e) {}
+	private void accion() {
+		while (true) {
+			int ms = new Random().nextInt(10000)+1;
+			System.out.println("\tDOS ("+ms+")");
+			try {Thread.sleep(  ms ) ;  } catch (Exception e) {}
+		}
 	}
 
 }
