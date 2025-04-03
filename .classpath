@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="C:/tmp/alberto.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Alberto.T1SERV/Documents/lib/gson-2.10.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Alberto.T1SERV/Documents/lib/xstream-1.4.21.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX21"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
