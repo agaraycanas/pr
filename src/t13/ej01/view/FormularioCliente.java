@@ -29,7 +29,7 @@ public class FormularioCliente extends Application {
 		this.tfNombre = new TextField();
 		this.bGuardar = new Button("Guardar");
 		
-		this.bGuardar.setOnAction(e -> this.clienteController.crearCliente(tfDni.getText(),tfNombre.getText()));
+		this.bGuardar.setOnAction(e -> guardarCliente());
 
 		grid.add(tDni, 0, 0);
 		grid.add(tNombre, 0, 1);
@@ -44,6 +44,10 @@ public class FormularioCliente extends Application {
 		bGuardar.setFont(Font.font("Verdana", 20));
 	}
 	
+	private void guardarCliente() {
+		this.clienteController.crearCliente(tfDni.getText(),tfNombre.getText());
+	}
+
 	@Override
 	public void start(Stage st) throws Exception {
 		this.clienteController = new ClienteController();
