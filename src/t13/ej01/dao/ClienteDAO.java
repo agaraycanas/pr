@@ -8,7 +8,6 @@ import java.sql.PreparedStatement;
 
 public class ClienteDAO {
 	
-	
 	public void guardarCliente(Cliente cliente) {
 		int dni = cliente.getDni();
 		String nombre = cliente.getNombre();
