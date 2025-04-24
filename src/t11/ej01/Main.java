@@ -20,8 +20,8 @@ public class Main {
 
 	private static void procesarClasico() {
 		List<Integer> listaProcesada = new ArrayList<>();
-		for ( Integer e : l ) {
-		 	listaProcesada.add( e*e );
+		for ( Integer a : l ) {
+		 	listaProcesada.add( a*a );
 		}
 		System.out.println(listaProcesada);
 	}
